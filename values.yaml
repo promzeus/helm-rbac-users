@@ -1,16 +1,11 @@
 users:
-  midas:
+  user1:
     resources: '["pods", "pods/log", pods/exec, pods/portforward]'
     verbs: '["get", "delete", "list", "create"]'
-  paxa:
+  user2:
     resources: '["pods", "pods/log", "pods/portforward"]'
     verbs: '["get", "list"]'
-  blister:
+  user3:
     resources: '["pods", "pods/log", pods/exec, pods/portforward]'
     verbs: '["get", "delete", "list", "create"]'
-  bender:
-    resources: '["pods", "pods/log", pods/exec, pods/portforward]'
-    verbs: '["get", "delete", "list", "create"]'
-  flint:
-    resources: '["pods", "pods/log", pods/exec, pods/portforward]'
-    verbs: '["get", "delete", "list", "create"]'
+
