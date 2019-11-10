@@ -1,0 +1,14 @@
+{{- range $key, $val := .Values.users }}
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: RoleBinding
+metadata:
+  name: {{ $key }}-role-binding
+roleRef:
+  kind: Role
+  name: {{ $key }}-role
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: {{ $key }}
+---
+{{- end }}
